@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <cstring>
 
-char* buf;
+char* buf = new char[40];
 
 int sum_to_n(int num) {
   int i, sum = 0;
@@ -23,5 +23,6 @@ void printSum() {
 
 int main() {
   printSum();
+  delete []buf;
   return 0;
 }
